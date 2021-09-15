@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNM Prediction</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4a822b1d6a.js"></script>
+</head>
+<body>
+    <div class="container">
+
+    <h3>Price Prediction</h3>
+    <form 
+    action='http://localhost:5000/predictform'
+    method='POST'>
+        
+        <!-- row 1 -->
+        <div class='row'>
+            <!-- input medinc -->
+            <div class="input-field col s3">
+                <input class='validate' id='retailer_id' 
+                name='category_id' type='text'>
+                <label for='category_id'>retailer_id...</label>
+            </div>
+            <!-- input houseage -->
+            <div class="input-field col s3">
+                <input class='validate' id='product_id' 
+                name='regular_price' type='text'>
+                <label for='regular_price'>product_id...</label>
+            </div>
+            <!-- input averooms -->
+           
+            <div class="input-field col s3">
+                <input class='validate' id='regular_price' 
+                name='one_unit_price' type='text'>
+                <label for='one_unit_price'>regular_price...</label>
+            </div>
+        </div>
+        
+        <!-- row 2 -->
+        <div class='row'>
+            <!-- input population -->
+         
+            <div class="input-field col s3">
+                <input class='validate' id='quantity' 
+                name='quantity' type='text'>
+                <label for='quantity'>quantity...</label>
+            </div>
+            <!-- input aveoccup -->
+            <div class="input-field col s3">
+                <input class='validate' id='limited' 
+                name='limited' type='text'>
+                <label for='limited'>limited...</label>
+            </div>
+        </div>
+        
+        <!-- row 3 -->
+        <center class='row'>
+            <button class='btn waves-effect waves-light' 
+            type='submit'>
+                PREDICT
+                &nbsp;
+                <i class="fas fa-hat-wizard"></i>
+            </button>
+        </center>
+        
+    </form>
+
+    </div>
+</body>
+</html>
